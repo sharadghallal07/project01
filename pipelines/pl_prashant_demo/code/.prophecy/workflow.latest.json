@@ -9,7 +9,7 @@
     "id" : "1",
     "uri" : "pipelines/pl_prashant_demo",
     "language" : "python",
-    "fabricId" : "10089",
+    "fabricId" : "10146",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -183,7 +183,7 @@
         "columnsSelector" : [ "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz##price" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "price > 20"
+          "expression" : "price > 25"
         }
       },
       "componentInfo" : {
