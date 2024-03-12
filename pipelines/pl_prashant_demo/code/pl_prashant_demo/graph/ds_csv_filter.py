@@ -15,4 +15,4 @@ def ds_csv_filter(spark: SparkSession) -> DataFrame:
         )\
         .option("header", True)\
         .option("sep", ";")\
-        .csv("dbfs:/mnt/demo-datasets/bookstore/books-csv/priceFilter/")
+        .csv("dbfs:/mnt/demo-datasets/bookstore/books-csv")
