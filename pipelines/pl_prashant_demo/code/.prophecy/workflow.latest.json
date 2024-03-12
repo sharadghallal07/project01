@@ -183,7 +183,7 @@
         "columnsSelector" : [ "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz##price" ],
         "condition" : {
           "format" : "sql",
-          "expression" : "price > 25"
+          "expression" : "price > 30"
         }
       },
       "componentInfo" : {
