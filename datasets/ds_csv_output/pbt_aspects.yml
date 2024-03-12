@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: book_id
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: Sum
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

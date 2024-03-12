@@ -1,0 +1,279 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "codeGenConfiguration" : {
+      "editableConfig" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/pl_prashant_demo",
+    "language" : "python",
+    "fabricId" : "10089",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "sharadghallalcloudaeonnetteam.project01sharad.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pl_prashant_demo",
+    "configurationVersion" : "v1"
+  },
+  "connections" : [ {
+    "id" : "BhjyB7vrh3UisVyA6MFGl",
+    "source" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
+    "sourcePort" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
+    "target" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+    "targetPort" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz"
+  }, {
+    "id" : "2b_9-313qIXiZNvdoFBxC",
+    "source" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+    "sourcePort" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
+    "target" : "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa",
+    "targetPort" : "6Ijpyqd44HSXyVtrbYca7$$O27BD3oG5rHnTRcUy6-ap"
+  } ],
+  "processes" : {
+    "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm" : {
+      "id" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ds_csv_filter",
+        "slug" : "ds_csv_filter",
+        "x" : -540,
+        "y" : -160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds_csv_filter"
+      }
+    },
+    "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP" : {
+      "id" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "price_above_30",
+        "slug" : "price_above_30",
+        "x" : -200,
+        "y" : -180,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "book_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "author",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz##price" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "price > 30"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa" : {
+      "id" : "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "ds_csv_price_filter",
+        "slug" : "ds_csv_price_filter",
+        "x" : 60,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "6Ijpyqd44HSXyVtrbYca7$$O27BD3oG5rHnTRcUy6-ap",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "book_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "author",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/ds_csv_price_filter"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

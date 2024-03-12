@@ -1,0 +1,138 @@
+name: Project01_sharad
+description: ''
+version: 0.0.1
+author: sharad.ghallal@cloudaeon.net
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: project01sharad
+  parentArtefactID: sharadghallalcloudaeonnetteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2024-03-05 07:14:33'
+pipelines:
+  pipelines/pl_firstdemo:
+    name: pl_firstdemo
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-05 07:14:33'
+    datasets:
+      inputs:
+      - datasets/ds_csv
+      outputs:
+      - datasets/ds_csv_output
+    subgraphs: []
+    dependencies: {}
+  pipelines/pl_prashant_demo:
+    name: pl_prashant_demo
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-12 07:11:56'
+    datasets:
+      inputs:
+      - datasets/ds_csv_filter
+      outputs:
+      - datasets/ds_csv_price_filter
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/ds_csv:
+    name: ds_csv
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    createdAt: '2024-03-05 07:21:15'
+    mode: batch
+    physicalDatasets:
+      Fabric_sharad:
+        fabricId: 10089
+        datasetType: File
+        description: ''
+        author: sharad.ghallal@cloudaeon.net
+        createdAt: '2024-03-05 07:21:15'
+  datasets/ds_csv_output:
+    name: ds_csv_output
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    createdAt: '2024-03-11 12:10:50'
+    mode: batch
+    physicalDatasets:
+      Fabric_sharad:
+        fabricId: 10089
+        datasetType: File
+        description: ''
+        author: sharad.ghallal@cloudaeon.net
+        createdAt: '2024-03-11 12:10:50'
+  datasets/ds_csv_filter:
+    name: ds_csv_filter
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    createdAt: '2024-03-12 07:14:35'
+    mode: batch
+    physicalDatasets:
+      Fabric_sharad:
+        fabricId: 10089
+        datasetType: File
+        description: ''
+        author: sharad.ghallal@cloudaeon.net
+        createdAt: '2024-03-12 07:14:35'
+  datasets/ds_csv_price_filter:
+    name: ds_csv_price_filter
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    createdAt: '2024-03-12 07:18:26'
+    mode: batch
+    physicalDatasets:
+      Fabric_sharad:
+        fabricId: 10089
+        datasetType: File
+        description: ''
+        author: sharad.ghallal@cloudaeon.net
+        createdAt: '2024-03-12 07:18:26'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-03-05 07:14:33'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2024-03-05 07:13:27'
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.4
+    isDefault: true
+    author: null
+    createdAt: '2024-03-05 07:13:27'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
