@@ -7,4 +7,4 @@ from pl_prashant_demo.config.ConfigStore import *
 from pl_prashant_demo.udfs.UDFs import *
 
 def price_above_30(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.filter((col("price") > lit(30)))
+    return in0.filter((col("price") > lit(20)))
