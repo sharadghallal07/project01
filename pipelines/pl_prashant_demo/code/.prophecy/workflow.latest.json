@@ -25,7 +25,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -63,134 +72,19 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "BhjyB7vrh3UisVyA6MFGl",
-    "source" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
-    "sourcePort" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
-    "target" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
-    "targetPort" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz"
+    "id" : "HJ8GhOjGXIUc30hoCp_UA",
+    "source" : "AUTArEmHwP65PAynMqCKN$$6zLnv3Hf7MSatLoTIC9WB",
+    "sourcePort" : "I39lQvjoG19dH0F-t5Odo$$o8G89o_7pzLcCln0DJkWj",
+    "target" : "nqYXwVvxieebw14HxOw9V$$hCC-Jql1-uLRYcvzKLfLo",
+    "targetPort" : "BD_K_Hw_GDkFWCl74dNRi$$ectBeP1uVlufzev5fXOyB"
   }, {
-    "id" : "2b_9-313qIXiZNvdoFBxC",
-    "source" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
-    "sourcePort" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
+    "id" : "w2ShgnqK8ZodnjZnvKSDv",
+    "source" : "nqYXwVvxieebw14HxOw9V$$hCC-Jql1-uLRYcvzKLfLo",
+    "sourcePort" : "B2ixAZi5tWVboWACZnV_l$$EGHQVTcAA4oveLllzOJl7",
     "target" : "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa",
     "targetPort" : "6Ijpyqd44HSXyVtrbYca7$$O27BD3oG5rHnTRcUy6-ap"
   } ],
   "processes" : {
-    "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm" : {
-      "id" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "ds_csv_filter",
-        "slug" : "ds_csv_filter",
-        "x" : -540,
-        "y" : -160,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/ds_csv_filter"
-      }
-    },
-    "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP" : {
-      "id" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "price_above_30",
-        "slug" : "price_above_30",
-        "x" : -200,
-        "y" : -180,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "book_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "title",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "author",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "category",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "price",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "columnsSelector" : [ "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz##price" ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "price > 30"
-        }
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Filter",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa" : {
       "id" : "SxMLimn32IMsRF4K_7IrW$$BFUDiFhAfPxIcdZQm8TAa",
       "component" : "Target",
@@ -266,6 +160,249 @@
       },
       "properties" : {
         "datasetId" : "datasets/ds_csv_price_filter"
+      }
+    },
+    "AUTArEmHwP65PAynMqCKN$$6zLnv3Hf7MSatLoTIC9WB" : {
+      "id" : "AUTArEmHwP65PAynMqCKN$$6zLnv3Hf7MSatLoTIC9WB",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : -520,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "I39lQvjoG19dH0F-t5Odo$$o8G89o_7pzLcCln0DJkWj",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "packageName" : "pckg_01",
+        "externalId" : "subgraphs/sub_pl_prashant_demo",
+        "name" : "sub_pl_prashant_demo"
+      },
+      "connections" : [ {
+        "id" : "BhjyB7vrh3UisVyA6MFGl",
+        "source" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
+        "sourcePort" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
+        "target" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+        "targetPort" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz"
+      }, {
+        "id" : "2b_9-313qIXiZNvdoFBxC",
+        "source" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+        "sourcePort" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
+        "target" : "AUTArEmHwP65PAynMqCKN$$6zLnv3Hf7MSatLoTIC9WB",
+        "targetPort" : "I39lQvjoG19dH0F-t5Odo$$o8G89o_7pzLcCln0DJkWj"
+      } ],
+      "processes" : {
+        "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm" : {
+          "id" : "OyMFyrTrX3QDJ-v4XBCXo$$hJfecjA8SuN4awmU0vmcm",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "ds_csv_filter",
+            "slug" : "ds_csv_filter",
+            "x" : -540,
+            "y" : -160,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "y8Mq20EFu9uW2dryiUvk1$$oCnc4SNw8e-Zmh-kIywm2",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/ds_csv_filter"
+          }
+        },
+        "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP" : {
+          "id" : "36XfiefRGfSjL0ukYeJni$$UEJtHaStM0zo6HLovDIDP",
+          "component" : "Filter",
+          "metadata" : {
+            "label" : "price_above_30",
+            "slug" : "price_above_30",
+            "x" : -200,
+            "y" : -180,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "book_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "title",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "author",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "category",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "price",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "C-xtUx6SFcJex-88-clzq$$5JArtpz0HWPmCYwBhisrR",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnsSelector" : [ "4PTLSMVcW4Dieh_sJiMlJ$$LclA1Yn6eBcTIVsMshHnz##price" ],
+            "condition" : {
+              "format" : "sql",
+              "expression" : "price > 20"
+            }
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Filter",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      }
+    },
+    "nqYXwVvxieebw14HxOw9V$$hCC-Jql1-uLRYcvzKLfLo" : {
+      "id" : "nqYXwVvxieebw14HxOw9V$$hCC-Jql1-uLRYcvzKLfLo",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "limit_5",
+        "slug" : "limit_5",
+        "x" : -240,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "BD_K_Hw_GDkFWCl74dNRi$$ectBeP1uVlufzev5fXOyB",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "book_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "title",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "author",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "price",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "B2ixAZi5tWVboWACZnV_l$$EGHQVTcAA4oveLllzOJl7",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "5"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     }
   },
