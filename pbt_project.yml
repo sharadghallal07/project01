@@ -39,7 +39,8 @@ pipelines:
       - datasets/ds_csv_filter
       outputs:
       - datasets/ds_csv_price_filter
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sub_pl_prashant_demo
     dependencies: {}
 datasets:
   datasets/ds_csv:
@@ -108,7 +109,15 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-subgraphs: {}
+subgraphs:
+  subgraphs/sub_pl_prashant_demo:
+    name: sub_pl_prashant_demo
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2024-03-14 12:51:58'
 sqlModels: {}
 sqlMacros: {}
 sqlSeeds: {}

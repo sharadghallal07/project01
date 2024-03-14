@@ -7,9 +7,9 @@ from prophecy.utils import *
 from pl_prashant_demo.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_ds_csv_filter = ds_csv_filter(spark)
-    df_price_above_30 = price_above_30(spark, df_ds_csv_filter)
-    ds_csv_price_filter(spark, df_price_above_30)
+    df_Subgraph_1 = Subgraph_1(spark, Config.Subgraph_1)
+    df_limit_5 = limit_5(spark, df_Subgraph_1)
+    ds_csv_price_filter(spark, df_limit_5)
 
 def main():
     spark = SparkSession.builder\
