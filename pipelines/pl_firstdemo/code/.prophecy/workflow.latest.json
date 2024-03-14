@@ -9,7 +9,7 @@
     "id" : "1",
     "uri" : "pipelines/pl_firstdemo",
     "language" : "python",
-    "fabricId" : "10089",
+    "fabricId" : "10236",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -25,7 +25,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "Subgraph_1",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -63,136 +72,25 @@
     "configurationVersion" : "v1"
   },
   "connections" : [ {
-    "id" : "AscxYZRHr9eadkXiNR1C3",
-    "source" : "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y",
-    "sourcePort" : "ei94v9y1FTuTEBVkk--A2$$I_hr_wRAAO7ajrVm2Mvx1",
-    "target" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
-    "targetPort" : "FjWMkCa6_SC5v0fEao8lS$$YF1cpduQRrnU0ure9u2aQ"
-  }, {
-    "id" : "lGsV1gICDvdTj65YWCpdg",
-    "source" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
-    "sourcePort" : "Q0YczmCnsjJ0JqIX_AHyo$$5vgvyJ1e2HvVNCT9y7pWk",
+    "id" : "hITXS2bb4W4f4tCuVM8OY",
+    "source" : "7g8U_aoLslSdgDqtI7E5m$$mHcZjnUQ52TZj9x9qLOM9",
+    "sourcePort" : "tjjyCM4dRS_QJ_E49dxA4$$lod2292Uqw3-EZMdSsR_R",
     "target" : "j2jAFepdR670GBoeUU8DX$$LO5b0oRx23n5_8Li_UZ5d",
     "targetPort" : "aVnQqySmNGH2IxylhysUr$$7yQrWCWLSpGccwW7BuWc_"
   }, {
-    "id" : "NRiVMmrVhV-NoRHUxXz-w$$UZXoeoNYw8WnoJO1z7V1W",
-    "source" : "j2jAFepdR670GBoeUU8DX$$LO5b0oRx23n5_8Li_UZ5d",
-    "sourcePort" : "u2auV3eSQ572vIeYnR38K$$ttK3rkj-9ZsEeUoTs0p-3",
+    "id" : "_h3zrpjmVqu5ftnAF3ztM$$OvTWr7C1hoOKNzbWXgIA-",
+    "source" : "zO2988Pv7DHtBaqiMt7Ld$$ziwYInin88FFVRz6zter1",
+    "sourcePort" : "hXbZ22YLNL_DkSJ726awt$$ebB_lJI-N3FY9E4lAX3so",
     "target" : "o1l8DU7xF_7OMDbo7cfXL$$iWUjue1rMlTRE8aywy1DS",
     "targetPort" : "SHfB3SPJL_Nxe1km_hUDI$$mBLEeJDGsvCbvREge7lwa"
+  }, {
+    "id" : "qSrT_BIjUAa3d4d0zAF4J",
+    "source" : "j2jAFepdR670GBoeUU8DX$$LO5b0oRx23n5_8Li_UZ5d",
+    "sourcePort" : "u2auV3eSQ572vIeYnR38K$$ttK3rkj-9ZsEeUoTs0p-3",
+    "target" : "zO2988Pv7DHtBaqiMt7Ld$$ziwYInin88FFVRz6zter1",
+    "targetPort" : "JZFcEy5PX8dJdQSaBdq8E$$-IHc-K35mBy4ZLZAhQSGe"
   } ],
   "processes" : {
-    "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y" : {
-      "id" : "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "ds_csv",
-        "slug" : "ds_csv",
-        "x" : -540,
-        "y" : -160,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "ei94v9y1FTuTEBVkk--A2$$I_hr_wRAAO7ajrVm2Mvx1",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/ds_csv"
-      }
-    },
-    "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i" : {
-      "id" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
-      "component" : "Limit",
-      "metadata" : {
-        "label" : "top_5_rows",
-        "slug" : "top_5_rows",
-        "x" : -400,
-        "y" : -160,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "FjWMkCa6_SC5v0fEao8lS$$YF1cpduQRrnU0ure9u2aQ",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "book_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "title",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "author",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "category",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "price",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
-        "outputs" : [ {
-          "id" : "Q0YczmCnsjJ0JqIX_AHyo$$5vgvyJ1e2HvVNCT9y7pWk",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "5"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Limit",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "j2jAFepdR670GBoeUU8DX$$LO5b0oRx23n5_8Li_UZ5d" : {
       "id" : "j2jAFepdR670GBoeUU8DX$$LO5b0oRx23n5_8Li_UZ5d",
       "component" : "Aggregate",
@@ -307,7 +205,7 @@
       "metadata" : {
         "label" : "ds_csv_output",
         "slug" : "ds_csv_output",
-        "x" : 40,
+        "x" : 160,
         "y" : -200,
         "phase" : 0,
         "cache" : false,
@@ -349,6 +247,218 @@
       },
       "properties" : {
         "datasetId" : "datasets/ds_csv_output"
+      }
+    },
+    "7g8U_aoLslSdgDqtI7E5m$$mHcZjnUQ52TZj9x9qLOM9" : {
+      "id" : "7g8U_aoLslSdgDqtI7E5m$$mHcZjnUQ52TZj9x9qLOM9",
+      "component" : "Subgraph",
+      "metadata" : {
+        "label" : "Subgraph_1",
+        "slug" : "Subgraph_1",
+        "x" : -420,
+        "y" : -120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "tjjyCM4dRS_QJ_E49dxA4$$lod2292Uqw3-EZMdSsR_R",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "externalId" : "subgraphs/sub_pl_firstdemo",
+        "name" : "sub_pl_firstdemo",
+        "packageName" : "pckg_02"
+      },
+      "connections" : [ {
+        "id" : "AscxYZRHr9eadkXiNR1C3",
+        "source" : "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y",
+        "sourcePort" : "ei94v9y1FTuTEBVkk--A2$$I_hr_wRAAO7ajrVm2Mvx1",
+        "target" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
+        "targetPort" : "FjWMkCa6_SC5v0fEao8lS$$YF1cpduQRrnU0ure9u2aQ"
+      }, {
+        "id" : "lGsV1gICDvdTj65YWCpdg",
+        "source" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
+        "sourcePort" : "Q0YczmCnsjJ0JqIX_AHyo$$5vgvyJ1e2HvVNCT9y7pWk",
+        "target" : "7g8U_aoLslSdgDqtI7E5m$$mHcZjnUQ52TZj9x9qLOM9",
+        "targetPort" : "tjjyCM4dRS_QJ_E49dxA4$$lod2292Uqw3-EZMdSsR_R"
+      } ],
+      "processes" : {
+        "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y" : {
+          "id" : "TFgTtRFWGbCtYdfVV0jF4$$fTw5AVt9DrXrddczR3y8Y",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "ds_csv",
+            "slug" : "ds_csv",
+            "x" : -540,
+            "y" : -160,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "ei94v9y1FTuTEBVkk--A2$$I_hr_wRAAO7ajrVm2Mvx1",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/ds_csv"
+          }
+        },
+        "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i" : {
+          "id" : "P2Xkse5EwpstmA9DcoP0P$$fW2h009VeSuYmIsZgWB_i",
+          "component" : "Limit",
+          "metadata" : {
+            "label" : "top_5_rows",
+            "slug" : "top_5_rows",
+            "x" : -400,
+            "y" : -160,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "FjWMkCa6_SC5v0fEao8lS$$YF1cpduQRrnU0ure9u2aQ",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "book_id",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "title",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "author",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "category",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "price",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ {
+              "id" : "Q0YczmCnsjJ0JqIX_AHyo$$5vgvyJ1e2HvVNCT9y7pWk",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "limit" : "5"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Limit",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      }
+    },
+    "zO2988Pv7DHtBaqiMt7Ld$$ziwYInin88FFVRz6zter1" : {
+      "id" : "zO2988Pv7DHtBaqiMt7Ld$$ziwYInin88FFVRz6zter1",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "limit_2_rows",
+        "slug" : "limit_2_rows",
+        "x" : 0,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JZFcEy5PX8dJdQSaBdq8E$$-IHc-K35mBy4ZLZAhQSGe",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "book_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Sum",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "hXbZ22YLNL_DkSJ726awt$$ebB_lJI-N3FY9E4lAX3so",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "2"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     }
   },

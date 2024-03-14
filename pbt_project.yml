@@ -24,7 +24,8 @@ pipelines:
       - datasets/ds_csv
       outputs:
       - datasets/ds_csv_output
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sub_pl_firstdemo
     dependencies: {}
   pipelines/pl_prashant_demo:
     name: pl_prashant_demo
@@ -108,7 +109,15 @@ functions:
   udafs: {}
   expressions: {}
   airflowFunctions: {}
-subgraphs: {}
+subgraphs:
+  subgraphs/sub_pl_firstdemo:
+    name: sub_pl_firstdemo
+    description: ''
+    author: rucha@cloudaeon.net
+    language: python
+    artefactID: ''
+    mode: batch
+    createdAt: '2024-03-14 13:06:00'
 sqlModels: {}
 sqlMacros: {}
 sqlSeeds: {}

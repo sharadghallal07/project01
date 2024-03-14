@@ -3,7 +3,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from pl_firstdemo.config.ConfigStore import *
+from .config import *
 from pl_firstdemo.udfs.UDFs import *
 
 def ds_csv(spark: SparkSession) -> DataFrame:

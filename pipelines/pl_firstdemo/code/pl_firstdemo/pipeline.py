@@ -7,10 +7,10 @@ from prophecy.utils import *
 from pl_firstdemo.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_ds_csv = ds_csv(spark)
-    df_top_5_rows = top_5_rows(spark, df_ds_csv)
-    df_sum_of_books = sum_of_books(spark, df_top_5_rows)
-    ds_csv_output(spark, df_sum_of_books)
+    df_Subgraph_1 = Subgraph_1(spark, Config.Subgraph_1)
+    df_sum_of_books = sum_of_books(spark, df_Subgraph_1)
+    df_limit_2_rows = limit_2_rows(spark, df_sum_of_books)
+    ds_csv_output(spark, df_limit_2_rows)
 
 def main():
     spark = SparkSession.builder\
