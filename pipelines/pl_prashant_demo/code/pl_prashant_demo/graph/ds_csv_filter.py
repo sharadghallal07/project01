@@ -3,7 +3,7 @@ from pyspark.sql.functions import *
 from pyspark.sql.types import *
 from prophecy.utils import *
 from prophecy.libs import typed_lit
-from .config import *
+from pl_prashant_demo.config.ConfigStore import *
 from pl_prashant_demo.udfs.UDFs import *
 
 def ds_csv_filter(spark: SparkSession) -> DataFrame:
@@ -15,4 +15,4 @@ def ds_csv_filter(spark: SparkSession) -> DataFrame:
         )\
         .option("header", True)\
         .option("sep", ";")\
-        .csv("dbfs:/mnt/demo-datasets/bookstore/books-csv")
+        .csv("dbfs:/mnt/demo-datasets/bookstore/books-csv/priceFilter/")

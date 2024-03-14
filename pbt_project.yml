@@ -24,7 +24,8 @@ pipelines:
       - datasets/ds_csv
       outputs:
       - datasets/ds_csv_output
-    subgraphs: []
+    subgraphs:
+    - subgraphs/sub_pl_firstdemo
     dependencies: {}
   pipelines/pl_prashant_demo:
     name: pl_prashant_demo
@@ -39,8 +40,7 @@ pipelines:
       - datasets/ds_csv_filter
       outputs:
       - datasets/ds_csv_price_filter
-    subgraphs:
-    - subgraphs/sub_pl_prashant_demo
+    subgraphs: []
     dependencies: {}
 datasets:
   datasets/ds_csv:

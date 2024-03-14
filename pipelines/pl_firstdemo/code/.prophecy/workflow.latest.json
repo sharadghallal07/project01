@@ -273,9 +273,9 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
+        "packageName" : "pckg_02",
         "externalId" : "subgraphs/sub_pl_firstdemo",
-        "name" : "sub_pl_firstdemo",
-        "packageName" : "pckg_02"
+        "name" : "sub_pl_firstdemo"
       },
       "connections" : [ {
         "id" : "AscxYZRHr9eadkXiNR1C3",
