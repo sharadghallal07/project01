@@ -186,9 +186,9 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
+        "packageName" : "pckg_01",
         "externalId" : "subgraphs/sub_pl_prashant_demo",
-        "name" : "sub_pl_prashant_demo",
-        "packageName" : "pckg_01"
+        "name" : "sub_pl_prashant_demo"
       },
       "connections" : [ {
         "id" : "BhjyB7vrh3UisVyA6MFGl",
