@@ -9,8 +9,8 @@ from pl_firstdemo.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_Subgraph_1 = Subgraph_1(spark, Config.Subgraph_1)
     df_sum_of_books = sum_of_books(spark, df_Subgraph_1)
-    df_limit_2_rows = limit_2_rows(spark, df_sum_of_books)
-    ds_csv_output(spark, df_limit_2_rows)
+    df_limit_1_rows = limit_1_rows(spark, df_sum_of_books)
+    ds_csv_output(spark, df_limit_1_rows)
 
 def main():
     spark = SparkSession.builder\

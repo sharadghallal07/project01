@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from pl_firstdemo.config.ConfigStore import *
 from pl_firstdemo.udfs.UDFs import *
 
-def limit_2_rows(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.limit(2)
+def limit_1_rows(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.limit(1)

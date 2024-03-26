@@ -9,7 +9,7 @@
     "id" : "1",
     "uri" : "pipelines/pl_firstdemo",
     "language" : "python",
-    "fabricId" : "10236",
+    "fabricId" : "10089",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -408,8 +408,8 @@
       "id" : "zO2988Pv7DHtBaqiMt7Ld$$ziwYInin88FFVRz6zter1",
       "component" : "Limit",
       "metadata" : {
-        "label" : "limit_2_rows",
-        "slug" : "limit_2_rows",
+        "label" : "limit_1_rows",
+        "slug" : "limit_1_rows",
         "x" : 0,
         "y" : -200,
         "phase" : 0,
@@ -454,7 +454,7 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "2"
+        "limit" : "1"
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.4&projectSubscriptionProjectId=12654&path=gems/Limit",
