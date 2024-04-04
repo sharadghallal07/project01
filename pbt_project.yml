@@ -42,6 +42,19 @@ pipelines:
       - datasets/ds_csv_price_filter
     subgraphs: []
     dependencies: {}
+  pipelines/pl_airlines:
+    name: pl_airlines
+    description: ''
+    author: sharad.ghallal@cloudaeon.net
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-03-27 13:00:09'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/ds_csv:
     name: ds_csv
